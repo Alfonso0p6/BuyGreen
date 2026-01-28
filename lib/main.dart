@@ -63,7 +63,7 @@ class Prodotto {
 Future<Prodotto?> fetchProdotto(String idn) async {
   var api = Uri(
     scheme: 'https',
-    host: 'api.alfonso0p6.dev',
+    host: 'apibackend',
     path: 'BuyGreen/getproduct.php',
     queryParameters: {'id': idn},
   );
@@ -97,7 +97,7 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  final Uri _url = Uri.parse('https://alfonso0p6.dev/buygreen/');
+  final Uri _url = Uri.parse('');
   Future<void> _launchUrl() async {
     if (!await launchUrl(_url)) {
       throw Exception('Could not launch $_url');
