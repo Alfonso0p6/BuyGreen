@@ -66,7 +66,7 @@ class _NewProductState extends State<NewProduct> {
   TextEditingController recyclabilityController = TextEditingController();
 
   int ver = 1;
-  final Uri _url = Uri.parse('https://alfonso0p6.dev/buygreen/');
+  final Uri _url = Uri.parse('');
   Future<void> _launchUrl() async {
     if (!await launchUrl(_url)) {
       throw Exception('Could not launch $_url');
@@ -76,7 +76,7 @@ class _NewProductState extends State<NewProduct> {
   Future<bool> isAppUpdateRequired() async {
     var api = Uri(
       scheme: 'https',
-      host: 'api.alfonso0p6.dev',
+      host: 'apibackend',
       path: 'BuyGreen/checkversion.php',
     );
 
@@ -183,7 +183,7 @@ class _NewProductState extends State<NewProduct> {
   void _postNewProduct() async {
     var api = Uri(
       scheme: 'https',
-      host: 'api.alfonso0p6.dev',
+      host: 'apibackend',
       path: 'BuyGreen/addproduct.php',
     );
 
